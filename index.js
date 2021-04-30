@@ -30,12 +30,6 @@ function dogName(name, breed) {
 const routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog]
 
 function exerciseDog(name, breed) {
-    let arr = []
 
-    for (let i = 0; i < routine.length; i++) {
-        let str = routine[i](name, breed)
-        arr.push(str)
-    }
-
-    return arr
+    return routine.map(fn => fn(name, breed))
 }
